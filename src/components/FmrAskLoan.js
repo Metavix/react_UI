@@ -4,11 +4,13 @@ import '../styles/Button.css';
 import '../styles/Input.css';
 import '../styles/InputHeader.css';
 import '../styles/fmrContainer.css';
+import '../styles/headerAns.css';
 import axios from 'axios';
 
 export default class FmrAskLoan extends Component {
     state = {
         months: 0,
+        name: '',
         amount: 0,
         user: this.props.userId,
         loanStatusAsked: false,
@@ -44,23 +46,33 @@ export default class FmrAskLoan extends Component {
                        <br/>
                        <br/>
                        <h2 className="input-header">The status of your loan is:</h2>
-                       <h3 className="input-header">{this.state.loanState}</h3>
+                       <h3 className="header-ans">{this.state.loanState}</h3>
                     </div>
                     :(
                         <div className="fmr-container">
                         <h2 className="input-header">Welcome user:</h2>
                         <h3 className="input-header" >{this.state.user}</h3>
-                        <h3 className="input-header">Months:</h3>
+                        <h3 className="input-header">Please type your bussines name:</h3>
                         <input
-                            type="number"
-                            placeholder="Months"
+                            type="text"
+                            placeholder="Name"
                             className="input"
                             onChange={this.onChange}
-                            value={this.state.username}
+                            value={this.state.name}
+                            name="name"
+                        />
+                        <br/>
+                        <h3 className="input-header">Please select the months</h3>
+                        <input
+                            type="number"
+                            placeholder="Select"
+                            className="input"
+                            onChange={this.onChange}
+                            value={this.state.months}
                             name="months"
                         />
                         <br/>
-                        <h3 className="input-header">Amount:</h3>
+                        <h3 className="input-header">Please select your amount:</h3>
                         <input
                             type="number"
                             placeholder="Amount"
