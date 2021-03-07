@@ -1,0 +1,9 @@
+.fmr-container {
+    border:.5px solid #fff;
+    background: rgba(19, 35, 47, 0.9);
+    border-radius:10px;
+    box-shadow:0px 0px 10px #000;
+    margin: 0 auto;
+    max-width: 25%;
+    min-height: 100%;
+}

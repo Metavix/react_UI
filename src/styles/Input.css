@@ -1,0 +1,11 @@
+.input {
+    max-width: 400px;
+    width: 80%;
+    line-height: 3em;
+    font-family: "Ubuntu", sans-serif;
+    margin: 1em 2em;
+    border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+    padding-left: 10px;
+}
